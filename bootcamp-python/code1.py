@@ -10,9 +10,11 @@ favouriteFruits = ["pawpaw", "apple", "grapes"] # list
 
 favouriteFruits.append("banana") # adding an item to the end of the list
 favouriteFruits[0], favouriteFruits[1] = favouriteFruits[1], favouriteFruits[0] # how to swap elements 0 and 1
-print(favouriteFruits)
+# print(favouriteFruits)
 
-print("My name is", name, "and my favourite fruits are", favouriteFruits)
+# print("My name is", name, "and my favourite fruits are", favouriteFruits)
 
 name = "Merossa" # changing content of the variable 'name'
-print("My name is", name, "and my favourite fruits are", favouriteFruits)
+
+# assignment: print a sentence that uses at least 3 data types
+print("My name is", name, ",my favourite fruits are", favouriteFruits, "and my favourite number is ", favouriteNumber)
