@@ -6,11 +6,11 @@ age = int(input("How old are you? "))
 
 # we want to check for teenagers (age 13 to 19)
 if age >= 13 and age <= 19:
-  print("Welcome to the teen club")
+  print("Welcome to the teen club", name)
 elif age > 19:
-  print("You are too old 😂")
+  print("Sorry ", name, ", you are too old 😂")
 else:
-  print("Sorry, you need to be older to join the club!")
+  print("Sorry ", name, ", you need to be older to join the club!")
 
 # task: try the above age comparison using a different code
 # ALTERNATIVE 1
@@ -30,3 +30,8 @@ else:
 #     print("You are too old 😂")
 #   else: 
 #     print("You are too young 🙂")
+
+# task: perform math operation 
+# ask the user for firstNumber, secondNumber and operator
+# check the operator using a conditional statement to perform
+# either addition or subtraction and print the result
