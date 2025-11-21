@@ -35,3 +35,16 @@ else:
 # ask the user for firstNumber, secondNumber and operator
 # check the operator using a conditional statement to perform
 # either addition or subtraction and print the result
+
+firstNumber = int(input("Enter the first number: "))
+operator = input("What do you want to do? + or - : ")
+secondNumber = int(input("Enter the second number: "))
+
+if operator == "+":
+  result = firstNumber + secondNumber
+  print("The answer is ", result)
+elif operator == "-":
+  result = firstNumber - secondNumber
+  print("The answer is ", result)
+else:
+  print("I don't know what to do!")
