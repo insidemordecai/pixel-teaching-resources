@@ -17,3 +17,17 @@ count = 3
 while count > 0:
   print("Mark is violent and Merossa is annoying.")
   count -= 1
+
+# task: print a right-angled triangle of stars 
+for i in range(1,6):
+  print("*" * i)
+
+# task: perform addition and multiplication of numbers in a list
+numbers = [4,5,6,7]
+total = 0 
+product = 1
+for num in numbers:
+  total += num
+  product *= num
+  
+print("The total is", total, "and the product is", product) 
