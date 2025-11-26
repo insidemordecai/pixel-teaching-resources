@@ -6,7 +6,7 @@ def prepare_dough():
 prepare_dough()
 
 # how to include parameters in your functions
-# task: create functions for other math operations
+# task: create functions for different math operations
 def add_numbers(a,b):
   return a + b
 
