@@ -1,0 +1,24 @@
+:root {
+  /* Background colours — dark forest green theme */
+  --bg:         #0a1a0f;   /* main page background */
+  --surface:    #0f2415;   /* slightly lighter background for cards/boxes */
+
+  /* Border colour — semi-transparent green line */
+  --border:     rgba(46, 204, 94, 0.15);
+
+  /* Accent colours */
+  --green:      #2ecc5e;   /* bright green — used for highlights & buttons */
+  --green-dim:  #1a7a38;   /* darker green — used for subtle labels */
+
+  /* Text colours */
+  --text:       #ffffff;          /* main text — white */
+  --text-muted: #8fad98;          /* secondary text — softer, less important */
+
+  /* Fonts */
+  --font-head:  "DM Serif Display", Georgia, serif;   /* headings font */
+  --font-body:  "Plus Jakarta Sans", sans-serif;       /* body/paragraph font */
+
+  /* Reusable values */
+  --radius:     12px;        /* how rounded our corners are */
+  --transition: 200ms ease;  /* how fast hover animations happen */
+}
