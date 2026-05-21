@@ -22,3 +22,79 @@
   --radius:     12px;        /* how rounded our corners are */
   --transition: 200ms ease;  /* how fast hover animations happen */
 }
+
+* Apply to EVERY element on the page */
+*, *::before, *::after {
+  box-sizing: border-box; /* padding doesn't add to the width — more predictable */
+  margin: 0;              /* remove default outer spacing */
+  padding: 0;             /* remove default inner spacing */
+}
+
+/* Styles for the whole page */
+body {
+  font-family: var(--font-body);        /* use our body font variable */
+  background-color: var(--bg);          /* dark green background */
+  color: var(--text);                   /* white text by default */
+  min-height: 100dvh;                   /* page is at least the full screen height */
+  line-height: 1.6;                     /* comfortable spacing between lines of text */
+  -webkit-font-smoothing: antialiased;  /* makes text look crisper on screens */
+}
+
+/* ============================================================
+   3. NAVBAR
+   ============================================================
+   The navigation bar is the strip at the top of the page
+   with the site name on the left and links on the right.
+
+   KEY CONCEPT — Flexbox:
+   display: flex turns a container into a "flex container".
+   Its children line up in a row by default.
+   justify-content: space-between pushes them to opposite ends.
+   align-items: center aligns them vertically in the middle.
+============================================================ */
+nav {
+  display: flex;                          /* lay children out in a row */
+  justify-content: space-between;         /* brand on left, links on right */
+  align-items: center;                    /* vertically centre everything */
+  padding: 1.25rem 2rem;                  /* space inside: top/bottom | left/right */
+  border-bottom: 1px solid var(--border); /* thin line under the nav */
+
+  /* Sticky: stays at the top when the user scrolls */
+  position: sticky;
+  top: 0;
+
+  /* Frosted glass effect */
+  background: rgba(10, 26, 15, 0.85);    /* semi-transparent background */
+  backdrop-filter: blur(12px);           /* blurs whatever is behind the nav */
+
+  z-index: 100; /* makes sure the nav sits on TOP of all other content */
+}
+
+/* The site name / logo text */
+.nav-brand {
+  font-family: var(--font-head); /* use the heading font */
+  font-size: 1.25rem;
+  color: var(--green);           /* bright green accent */
+  text-decoration: none;         /* remove the underline from the link */
+}
+
+/* The row of navigation links */
+.nav-links {
+  display: flex;        /* lay links out in a row */
+  gap: 2rem;            /* space between each link */
+  list-style: none;     /* remove the bullet points from the <ul> */
+}
+
+/* Each individual link */
+.nav-links a {
+  color: var(--text-muted);            /* muted colour by default */
+  text-decoration: none;               /* no underline */
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color var(--transition); /* smooth colour change on hover */
+}
+
+/* When the user hovers over a link */
+.nav-links a:hover {
+  color: var(--green); /* change to bright green */
+}
