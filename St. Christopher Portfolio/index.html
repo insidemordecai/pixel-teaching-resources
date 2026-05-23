@@ -1,18 +1,29 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Portfolio</title>
 
-  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts: load our two fonts from the internet -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Our stylesheet — this is how we link an external CSS file -->
+  <link rel="stylesheet" href="reference-style.css" />
 </head>
+
 
 <body>
   <nav>
-    <a href="#">John Doe</a>
+    <!-- Brand name / logo — EDIT THIS to your name or nickname -->
+    <a href="#" class="nav-brand">John Doe</a>
 
-    <ul>
+    <!-- Navigation links — each href="#id" scrolls to that section -->
+    <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
