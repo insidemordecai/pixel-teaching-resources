@@ -1,3 +1,36 @@
+/*
+  ================================================
+  PORTFOLIO STYLESHEET — style.css
+  Pixel Academy | St. Christopher School (Grade 8 & 9)
+  ================================================
+
+  HOW THIS FILE IS ORGANISED:
+  1. CSS Variables  — our "colour & font settings"
+  2. Base Reset     — removes browser default spacing
+  3. Navbar         — the top navigation bar
+  4. Hero Section   — the main profile area
+  5. Buttons        — primary and outline button styles
+  6. Skill Tags     — the little label chips
+  7. Divider        — the thin line between sections
+  8. Placeholders   — "Coming Soon" sections
+  9. Responsive     — adjustments for smaller screens
+*/
+
+
+/* ============================================================
+   1. CSS VARIABLES
+   ============================================================
+   Think of variables like named boxes that store a value.
+   Instead of typing the same colour 20 times, we give it
+   a name and use that name everywhere.
+
+   Syntax:   --name: value;
+   Usage:    color: var(--green);
+
+   WHY THIS IS POWERFUL: if we want to change the brand
+   colour from green to blue, we change it in ONE place here
+   and it updates the entire page automatically.
+============================================================ */
 :root {
   /* Background colours — dark forest green theme */
   --bg:         #0a1a0f;   /* main page background */
@@ -23,7 +56,19 @@
   --transition: 200ms ease;  /* how fast hover animations happen */
 }
 
-* Apply to EVERY element on the page */
+
+/* ============================================================
+   2. BASE RESET
+   ============================================================
+   Different browsers (Chrome, Firefox, Safari) add their own
+   default margins and padding to elements. This causes pages
+   to look different across browsers.
+
+   We "reset" them here so we start from a clean slate and
+   have full control over spacing ourselves.
+============================================================ */
+
+/* Apply to EVERY element on the page */
 *, *::before, *::after {
   box-sizing: border-box; /* padding doesn't add to the width — more predictable */
   margin: 0;              /* remove default outer spacing */
@@ -39,6 +84,7 @@ body {
   line-height: 1.6;                     /* comfortable spacing between lines of text */
   -webkit-font-smoothing: antialiased;  /* makes text look crisper on screens */
 }
+
 
 /* ============================================================
    3. NAVBAR
