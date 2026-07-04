@@ -143,3 +143,190 @@ nav {
 .nav-links a:hover {
   color: var(--green); /* change to bright green */
 }
+
+/* ============================================================
+   4. HERO SECTION
+   ============================================================
+   The hero is the main profile block — it contains the avatar,
+   name, bio, buttons and skill tags all stacked vertically
+   and centred in the middle of the page.
+
+   KEY CONCEPT — flex-direction: column
+   By default flex lays items in a ROW (left to right).
+   flex-direction: column changes this to a COLUMN (top to bottom).
+   Combined with align-items: center, everything is centred.
+============================================================ */
+.hero {
+  display: flex;
+  flex-direction: column; /* stack children vertically */
+  align-items: center; /* centre everything horizontally */
+  text-align: center; /* centre the text inside each child */
+  padding: 5rem 2rem 4rem; /* top | left+right | bottom */
+  gap: 1.5rem; /* space between each child element */
+  max-width: 760px; /* don't let the section get too wide */
+  margin: 0 auto; /* centre the whole section on the page */
+}
+
+/* ---- Avatar ---- */
+/*
+  The avatar is a circle with a green border.
+  border-radius: 50% is what makes a square into a perfect circle.
+*/
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%; /* perfect circle */
+  border: 3px solid var(--green); /* green ring around the circle */
+  background-color: var(--surface); /* dark background inside */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem; /* large emoji size */
+}
+
+/* ---- Role Badge ---- */
+/*
+  The small pill-shaped label above the name (e.g. "Student Developer").
+  border-radius: 999px makes a fully rounded "pill" shape on any size element.
+*/
+.badge {
+  background: rgba(46, 204, 94, 0.12); /* very faint green background */
+  color: var(--green);
+  border: 1px solid rgba(46, 204, 94, 0.3);
+  padding: 0.35rem 1rem;
+  border-radius: 999px; /* pill shape */
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em; /* slight spacing between letters */
+  text-transform: uppercase; /* all caps */
+}
+
+/* ---- Main Heading (Name) ---- */
+/*
+  clamp(min, preferred, max) is a fluid font size.
+  The font grows and shrinks with the screen, but never
+  goes below 2.2rem or above 3.5rem.
+*/
+.hero h1 {
+  font-family: var(--font-head); /* use the elegant heading font */
+  font-size: clamp(2.2rem, 6vw, 3.5rem); /* fluid: grows with screen width */
+  line-height: 1.15; /* tight line height for large headings */
+}
+
+/* The <span> inside h1 wraps the name so we can colour just that part */
+.hero h1 span {
+  color: var(--green);
+}
+
+/* ---- Bio Paragraph ---- */
+.hero p {
+  font-size: 1.05rem;
+  color: var(--text-muted); /* softer colour — less important than the name */
+  max-width: 55ch; /* limit line length for readability (55 characters) */
+  line-height: 1.75; /* extra line spacing for comfortable reading */
+}
+
+/* ============================================================
+   5. BUTTONS
+   ============================================================
+   We have two button styles that share a base .btn class,
+   then each gets its own extra class for colour.
+
+   .btn         — shared size, shape, font
+   .btn-primary — solid green fill (main action)
+   .btn-outline — transparent with a border (secondary action)
+
+   KEY CONCEPT — Multiple Classes
+   An element can have more than one class:
+   <a class="btn btn-primary"> applies BOTH sets of styles.
+============================================================ */
+
+/* Wrapper that holds both buttons side by side */
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap; /* if screen is narrow, buttons wrap to next line */
+  justify-content: center;
+}
+
+/* Shared base styles for ALL buttons */
+.btn {
+  padding: 0.7rem 1.6rem;
+  border-radius: var(--radius); /* use our --radius variable */
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer; /* shows the hand cursor on hover */
+  text-decoration: none; /* removes underline (it's an <a> tag) */
+  transition: all var(--transition); /* smooth hover animation */
+  border: none;
+}
+
+/* Primary button — solid green */
+.btn-primary {
+  background: var(--green);
+  color: #0a1a0f; /* dark text on green background for contrast */
+}
+.btn-primary:hover {
+  background: #25b850; /* slightly darker green on hover */
+  transform: translateY(-2px); /* tiny lift effect */
+}
+
+/* Outline button — transparent with a border */
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+.btn-outline:hover {
+  border-color: var(--green); /* border turns green on hover */
+  color: var(--green);
+}
+
+/* ============================================================
+   6. SKILL TAGS
+   ============================================================
+   Small rectangular chips that list the student's skills.
+   They sit in a row and wrap onto the next line if needed.
+============================================================ */
+
+/* Container that holds all the tags */
+.skills-row {
+  display: flex;
+  flex-wrap: wrap; /* wrap to next line when there's no space */
+  gap: 0.6rem;
+  justify-content: center;
+}
+
+/* Each individual skill chip */
+.skill-tag {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--radius);
+  font-size: 0.82rem;
+  font-weight: 500;
+  transition: all var(--transition);
+}
+
+/* On hover — the tag lights up green */
+.skill-tag:hover {
+  border-color: var(--green);
+  color: var(--green);
+  background: rgba(46, 204, 94, 0.05); /* very faint green glow */
+}
+
+/* ============================================================
+   7. DIVIDER
+   ============================================================
+   A thin horizontal line used to visually separate sections.
+   We remove the default <hr> border and replace it with a
+   custom border-top using our --border variable.
+============================================================ */
+.divider {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto; /* centre it on the page */
+  border: none; /* remove default <hr> styling */
+  border-top: 1px solid var(--border); /* our custom thin line */
+}
