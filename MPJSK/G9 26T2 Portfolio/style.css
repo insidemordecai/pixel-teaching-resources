@@ -330,3 +330,60 @@ nav {
   border: none; /* remove default <hr> styling */
   border-top: 1px solid var(--border); /* our custom thin line */
 }
+
+
+/* ============================================================
+   8. PLACEHOLDER SECTIONS
+   ============================================================
+   These "Coming Soon" blocks are temporary holders for the
+   Projects and Contact sections we'll build in future classes.
+   They show students the full structure of the portfolio now.
+============================================================ */
+.coming-soon {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--text-muted);
+}
+
+.coming-soon h2 {
+  font-family: var(--font-head);
+  font-size: 1.8rem;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.coming-soon p {
+  font-size: 0.9rem;
+}
+
+/* Small uppercase label above each section heading */
+.section-label {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--green-dim);
+  margin-bottom: 0.5rem;
+}
+
+/* ============================================================
+   9. RESPONSIVE — SMALLER SCREENS
+   ============================================================
+   @media queries let us apply styles ONLY when the screen
+   is a certain size. This makes the page look good on phones.
+
+   max-width: 480px means: "apply these styles on screens
+   that are 480px wide or LESS" (i.e. most phones).
+============================================================ */
+@media (max-width: 480px) {
+  nav {
+    padding: 1rem; /* less padding on small screens */
+  }
+  .nav-links {
+    gap: 1rem; /* links sit closer together */
+  }
+  .hero {
+    padding: 3rem 1.25rem; /* reduce the tall top/bottom padding */
+  }
+}
