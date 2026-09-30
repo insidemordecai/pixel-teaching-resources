@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #dff6ff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+form {
+  background-color: white;
+  width: min(100%, 520px);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  text-align: center;
+  color: #e75480;
+  margin-bottom: 10px;
+}
+
+p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 18px;
+  border: 2px solid #bde7f5;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input:focus-visible {
+  outline: 3px solid rgba(231, 84, 128, 0.2);
+  border-color: #e75480;
+}
+
+.gender-group {
+  border: 0;
+  padding: 0;
+  margin: 0 0 22px;
+}
+
+.gender-group legend {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #555;
+}
+
+.radio-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 24px 0 0;
+  font-weight: normal;
+  color: #555;
+  cursor: pointer;
+}
+
+.radio-option input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color: #e75480;
+  cursor: pointer;
+}
+
+.checkbox-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 22px;
+  font-weight: normal;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.checkbox-option input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin: 2px 0 0;
+  accent-color: #e75480;
+  flex: 0 0 auto;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #e75480;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #d63f6c;
+}
+
+button:focus-visible,
+.radio-option:has(input:focus-visible),
+.checkbox-option:has(input:focus-visible) {
+  outline: 3px solid rgba(231, 84, 128, 0.35);
+  outline-offset: 3px;
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 12px;
+  }
+
+  form {
+    padding: 22px;
+  }
+}

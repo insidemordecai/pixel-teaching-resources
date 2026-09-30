@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+
+    <form>
+
+        <h1>Create an Account</h1>
+
+        <p>Sign up to create your account.</p>
+
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullName" placeholder="Enter your full name">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email">
+
+        <label for="DOB">Date of Birth</label>
+        <input type="date" id="DOB" placeholder="enter date of birth">
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password">
+
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword" placeholder="Confirm your password">
+
+        <fieldset class="gender-group">
+            <legend>Gender</legend>
+
+            <label class="radio-option" for="male">
+                <input type="radio" id="male" name="gender" value="male" required>
+                <span>Male</span>
+            </label>
+
+            <label class="radio-option" for="female">
+                <input type="radio" id="female" name="gender" value="female">
+                <span>Female</span>
+            </label>
+        </fieldset>
+
+        <label class="checkbox-option" for="terms">
+            <input type="checkbox" id="terms" name="terms" required>
+            <span>I agree to the terms and conditions</span>
+        </label>
+
+        <button type="submit">Sign Up</button>
+
+    </form>
+
+</body>
+
+</html>
